@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Junin</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <style>
+            html, body { height:100%; margin:0; }
+            main, body { min-height:100vh; }
+            main video {
+                position:fixed;
+                top:50%;
+                left:50%;
+                min-width:100%;
+                min-height:100%;
+                width:auto;
+                height:auto;
+                transform:translate(-50%,-50%);
+                z-index:-1;
+                object-fit:cover;
+                background:#000;
+            }
+            /* Scanline overlay: sits above the video (z-index:0), below header (z-index:1) */
+            main::before {
+                content: "";
+                position: fixed;
+                inset: 0;
+                z-index: 0;
+                pointer-events: none;
+                /* subtle thin horizontal lines every 4px */
+                background: repeating-linear-gradient(
+                    to bottom,
+                    rgba(0,0,0,0)1px,
+                    rgba(0,0,0,0) 12px,
+                    rgba(0,0,0,0.12) 12px,
+                    rgba(0,0,0,0.12) 16px
+                );
+                mix-blend-mode: overlay;
+                opacity: 0.6;
+            }
+            header {
+                position:relative;
+                z-index:1;
+                display:flex;
+                align-items:center;
+                justify-content:center;
+                padding:2rem;
+                pointer-events:none;
+            }  
+            header h1 {
+                margin:0;
+                color:#fff;
+                background:rgba(0,0,0,0.5);
+                padding:.5rem 1rem;
+                border-radius:4px;
+                pointer-events:auto;
+            }
+        </style>
+
+        <div class="header-content">
+                <h1>Em construção</h1>
+        </div>
+    </header>
+    <main>
+        <video autoplay loop muted>
+            <source src="media/video/rei-plush.mp4" type="video/mp4">
+            Seu navegador não suporta a tag de vídeo.
+    </main>
+    <footer>
+        <p>Torando: lym. - Cigana Porradeira.wav</p>
+        <audio autoplay loop>
+            <source src="media/audio/lym.-CiganaPorradeira.wav" type="audio/wav">
+            Seu navegador não suporta a tag de áudio.
+        <p>&copy; 2023 Junin. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>

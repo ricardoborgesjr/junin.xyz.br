@@ -24,90 +24,69 @@
                 margin-top: 100px;
                 margin-left: 100px;
                 margin-right: 100px;
-                background-color: #0081e3;
+                background-color: rgba(255, 255, 255, 0.6);
                 border-radius: 25px;
                 border-color: #fff;
                 padding: 25px;
                 z-index: 1;
             }
             h1 {
-                color: #fff;
+                color: #000;
                 font-size: 3em;
             }
             p {
-                color: #fff;
+                color: #000;
                 font-size: 1.5em;
             }
         </style>
         <link rel="icon" type="image/x-icon" href="favicon.ico" />
-        <title>junin.xyz.br</title>
+        <title>Junin</title>
     </head>
     <body>
         <div class="content">
             <div>
-                <h1>Tudo começa de algum lugar</h1>
+                <h1>Gripado</h1>
                 <p>
-                    Isso aqui era pra ter um visual fortemente inspirado em
-                    flyers de raves dos anos 1990 e 2000... Porém eu odeio HTML
-                    e CSS então o máximo que deu foi isso aqui por enquanto.
+                    Tá frio eu tô gripado e escutando a mais dramática da Olivia
+                    Rodigo enquando escrevo isso...
                 </p>
-                <p>
-                    Na moral faz meses que que tô pra toca isso aqui, que alias
-                    não tem muita pretenção não era mais só o lance da estética
-                    e posta uma outra bobagem.
-                </p>
-                <p>
-                    Mas até que é um bom resultado pra alguma coisa feita em
-                    menos de 1 hora...
-                </p>
+                <iframe
+                    width="560"
+                    height="315"
+                    src="https://www.youtube.com/embed/mA9HZEJfmGw?si=PkcZPYt2wrY7dDtZ"
+                    title="YouTube video player"
+                    frameborder="0"
+                    allow="
+                        accelerometer;
+                        autoplay;
+                        clipboard-write;
+                        encrypted-media;
+                        gyroscope;
+                        picture-in-picture;
+                        web-share;
+                    "
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allowfullscreen
+                ></iframe>
             </div>
         </div>
         <div class="fullscreen-div">
             <css-doodle
                 ><style>
-                    @grid: 1 / 100vw 100vh;
-                    @content: @svg(
-    viewBox: 0 0 10 10;
-    preserveAspectRatio: xMidYMid slice;
-
-    --bc: #ffffff;
-    --fc: #0081E3;
-    --size: 10%;
-
-    defs symbol#circle {
-      viewBox: 0 0 10 10;
-      g {
-        stroke-width: 1;
-        stroke: @p(--fc);
-        fill: @p(--bc);
-        circle*10-1 {
-          cx, cy: @match(n<6, 0 10, 10 0);
-          r: $(1 + @n.match(n<6, -1, -6) * 2);
-        }
-      }
-    }
-
-    defs pattern#pattern {
-      viewBox: 0 0 10 10;
-      width, height: @p(--size);
-      rect {
-        width, height: 100%;
-        fill: @p(--bc);
-      }
-      use*4 {
-        href: #circle;
-        width, height: 50%;
-        transform:
-          translate(@pn(0, 10 0, 0 10, 10 10))
-          rotate(@pn(0, 90, -90, 180));
-      }
-    }
-
-    rect {
-      width, height: 100%;
-      fill: url(#pattern);
-    }
-  );
+                    @grid: 150 / 100vmax / #0a0c27;
+                    --hue: calc(180 + 1.5 * @x * @y);
+                    background: hsl(var(--hue), 50%, 70%);
+                    margin: -0.5px;
+                    transition: @r (0.5s) ease;
+                    clip-path: polygon(
+                        @pick
+                            (
+                                "0 0, 100% 0, 100% 100%",
+                                "0 0, 100% 0, 0 100%",
+                                "0 0, 100% 100%, 0 100%",
+                                "100% 0, 100% 100%, 0 100%"
+                            )
+                    );
                 </style></css-doodle
             >
         </div>

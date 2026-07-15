@@ -1,0 +1,95 @@
+<!doctype html>
+<html>
+    <script src="https://esm.sh/css-doodle/css-doodle.min.js?raw"></script>
+    <head>
+        <style>
+            html,
+            body {
+                margin: 0;
+            }
+            css-doodle:not(:defined) {
+                display: none;
+            }
+
+            .fullscreen-div {
+                width: 100vw; /* 100% of the viewport width */
+                height: 100vh; /* 100% of the viewport height */
+                box-sizing: border-box; /* Prevents padding issues from creating scrollbars */
+                position: relative;
+                z-index: 0;
+            }
+
+            .content {
+                position: absolute;
+                margin-top: 100px;
+                margin-left: 100px;
+                margin-right: 100px;
+                background-color: rgba(255, 255, 255, 0.6);
+                border-radius: 25px;
+                border-color: #fff;
+                padding: 25px;
+                z-index: 1;
+            }
+            h1 {
+                color: #000;
+                font-size: 3em;
+            }
+            p {
+                color: #000;
+                font-size: 1.5em;
+            }
+        </style>
+        <link rel="icon" type="image/x-icon" href="favicon.ico" />
+        <title>Junin</title>
+    </head>
+    <body>
+        <div class="content">
+            <div>
+                <h1>Gripado</h1>
+                <p>
+                    Tá frio eu tô gripado e escutando a mais dramática da Olivia
+                    Rodigo enquando escrevo isso...
+                </p>
+                <iframe
+                    width="560"
+                    height="315"
+                    src="https://www.youtube.com/embed/mA9HZEJfmGw?si=PkcZPYt2wrY7dDtZ"
+                    title="YouTube video player"
+                    frameborder="0"
+                    allow="
+                        accelerometer;
+                        autoplay;
+                        clipboard-write;
+                        encrypted-media;
+                        gyroscope;
+                        picture-in-picture;
+                        web-share;
+                    "
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allowfullscreen
+                ></iframe>
+            </div>
+            <a href="tudo-comeca-de-algum-lugar.html">Postagem anterior</a>
+        </div>
+        <div class="fullscreen-div">
+            <css-doodle
+                ><style>
+                    @grid: 150 / 100vmax / #0a0c27;
+                    --hue: calc(180 + 1.5 * @x * @y);
+                    background: hsl(var(--hue), 50%, 70%);
+                    margin: -0.5px;
+                    transition: @r (0.5s) ease;
+                    clip-path: polygon(
+                        @pick
+                            (
+                                "0 0, 100% 0, 100% 100%",
+                                "0 0, 100% 0, 0 100%",
+                                "0 0, 100% 100%, 0 100%",
+                                "100% 0, 100% 100%, 0 100%"
+                            )
+                    );
+                </style></css-doodle
+            >
+        </div>
+    </body>
+</html>
